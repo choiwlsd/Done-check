@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Done? check!",
+  "description": "To-do service, but on web. Done? then check what you did!",
+  "version": "1.0.0",
+  "icons": {
+    "16": "icons/icon-1.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
