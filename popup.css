@@ -1,3 +1,10 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+html, body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', sans-serif;
+}
+
+
 .frame {
     width: 500px;
     height: auto;
@@ -12,7 +19,7 @@
 .frame > img {
     width: 200px;
     height: auto;
-    margin: 20px 0 10px 0;
+    margin: 40px 0 18px 0;
 }
 
 .container {
@@ -22,6 +29,59 @@
     width: 80%;
     height: 70%;
     min-height: 300px;
-    padding: 15px 10px;
+    padding: 30px 40px;
     margin: 20px 0;
+}
+
+.date-container {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    height: 25px;
+    margin: 10px 0 40px 0;
+}
+
+#today-date {
+    font-size: 21px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#yesterday, #tomorrow {
+    cursor: pointer;
+    user-select: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* 하나의 체크박스와 task 내용 세트의 스타일 */
+.task {
+    display: flex;
+    align-items: center; /* 세로축 정렬 */
+    gap: 8px; /* 체크박스와 텍스트 사이의 간격 */
+    font-size: 18px;
+}
+
+/* 체크박스 스타일 */
+.task input[type="checkbox"] {
+    /* 기본 브라우저 스타일 제거 */
+    -webkit-appearance: none;
+    appearance: none;
+
+    /* 크기 & 모양 */
+    width: 20px;
+    height: 20px;
+    border: 1px solid #797979;
+    border-radius: 15px;
+    background-color: #f7f7f7;
+    cursor: pointer;
+
+    /* 애니메이션 부드럽게 */
+    transition: all 0.2s ease;
+}
+
+/* 체크된 상태 스타일 */
+.task input[type="checkbox"]:checked {
+    background-color: black;
+    border: none;
 }
