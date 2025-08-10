@@ -85,3 +85,8 @@ html, body {
     background-color: black;
     border: none;
 }
+
+.task input[type="checkbox"]:checked + span{
+    text-decoration: line-through;
+    color: #6f6f6f;
+}
