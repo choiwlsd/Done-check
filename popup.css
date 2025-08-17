@@ -57,13 +57,14 @@ html, body {
 /* 하나의 체크박스와 task 내용 세트의 스타일 */
 #task-container {
     font-size: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .task {
     display: flex;
     align-items: center; /* 세로축 정렬 */
     gap: 8px; /* 체크박스와 텍스트 사이의 간격 */
+    margin-bottom: 20px;
 }
 
 /* 체크박스 스타일 */
@@ -82,6 +83,9 @@ html, body {
 
     /* 애니메이션 부드럽게 */
     transition: all 0.2s ease;
+
+    /* 크기 고정 */
+    flex-shrink: 0;
 }
 
 /* 체크된 상태 스타일 */
@@ -98,9 +102,7 @@ html, body {
 .task input[type="text"] {
     outline: none;
     border: none;
-    background-color: #f7f7f7;
+    background-color: inherit;
+    width: 90%;
+    text-align: start;
 }
-
-/* .task input[type="text"]::placeholder {
-
-} */
