@@ -26,6 +26,7 @@ function createTask() {
 
     input.focus();
 
+    // Enter를 입력하기 전까지는 입력중
     input.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' && input.value.trim() !== '') {
             const span = document.createElement('span');
@@ -34,6 +35,14 @@ function createTask() {
             createTask();
         }
     });
+
+    // 입력 중일 때는 체크박스를 체크할 수 없게
+    checkbox.addEventListener("change", (e) => {
+        if (input.value.trim() === "") {
+            e.preventDefault() // 체크 자체가 불가능
+            checkbox.checked = false;
+        }
+    })
 }
 
 createTask();
